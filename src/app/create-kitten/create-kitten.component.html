@@ -1,0 +1,51 @@
+<!-- Un formulaire d'ajout de chaton (createKitten) -->
+<!--(les chatons sont ajoutés à la collection globale, quand ils sont créés); les trois infos sont obligatoires. -->
+
+<!-- #form="ngForm" = On a accès à l'était du formulaire -->
+
+<form #myForm="ngForm" (ngSubmit)="myForm.valid && addCatToGlobal()">
+  <fieldset>
+    <label for="name">Nom : </label>
+    <input
+      id="name"
+      type="text"
+      [(ngModel)]="cat.name"
+      required
+      #name="ngModel"
+      name="name"
+    />
+
+    <label for="race">Race : </label>
+    <input
+      id="race"
+      type="text"
+      [(ngModel)]="cat.race"
+      required
+      race="ngModel"
+      name="race"
+    />
+
+    <label for="date">Date de naissance : </label>
+    <input
+      id="date"
+      type="date"
+      [(ngModel)]="cat.date"
+      required
+      #date="ngModel"
+      name="date"
+    />
+
+    <label for="image">Photo mignonne : </label>
+    <input
+      id="image"
+      type="text"
+      [(ngModel)]="cat.image"
+      required
+      #image="ngModel"
+      name="image"
+    />
+    <button [ngStyle]="{ backgroundColor: myForm.valid ? 'green' : 'white' }">
+      Envoyer le chat
+    </button>
+  </fieldset>
+</form>

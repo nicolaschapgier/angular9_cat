@@ -1,0 +1,50 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.coucou {
+  display: flex;
+}
+.coucou div {
+  margin: 0 20px;
+}
+fieldset {
+  display: flex;
+  flex-direction: column;
+  width: 30%;
+  border: 3px solid red;
+  padding: 3px;
+}
+label {
+  margin: 5px 0 0 0;
+}
+.catCard p {
+  margin-bottom: 20px;
+}
+button {
+  margin: 2px 20px;
+  padding: 10px;
+  border-radius: 20px;
+  cursor: pointer;
+}
+p {
+  color: brown;
+}
+.catCard {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  border: 1px solid black;
+  margin: 3px 0;
+}
+.catCard img {
+  width: 20%;
+}
+.pasAffiche {
+  display: initial;
+}
+.afficher {
+  display: none;
+}

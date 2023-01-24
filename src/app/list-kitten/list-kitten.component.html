@@ -1,0 +1,50 @@
+<!-- Une liste de chatons, avec l'image affichée (listKitten) -->
+<section class="coucou">
+  <app-create-kitten (typeOfCat)="onGetCat($event)"> </app-create-kitten>
+  <div>
+    <form>
+      <fieldset>
+        <div class="catCard" *ngFor="let item of catSPA">
+          <h3>Photo mignonne :</h3>
+          <img
+            (mouseover)="printInfos(item)"
+            (mouseleave)="printInfos(item)"
+            [src]="item.image"
+            alt=""
+          />
+
+          <h3 [ngClass]="item.survol ? 'afficher' : 'pasAffiche'">Nom :</h3>
+          <p [ngClass]="item.survol ? 'afficher' : 'pasAffiche'">
+            {{ item.name }}
+          </p>
+
+          <h3 [ngClass]="item.survol ? 'afficher' : 'pasAffiche'">Race :</h3>
+
+          <p [ngClass]="item.survol ? 'afficher' : 'pasAffiche'">
+            {{ item.race }}
+          </p>
+
+          <h3 [ngClass]="item.survol ? 'afficher' : 'pasAffiche'">
+            Date de naissance :
+          </h3>
+          <p [ngClass]="item.survol ? 'afficher' : 'pasAffiche'">
+            {{ item.date }}
+          </p>
+
+          <button (click)="addToAdopt(item)">Adopter le chat</button>
+        </div>
+        <h4>Image type :</h4>
+
+        <p>
+          https://ih1.redbubble.net/image.3002404371.6254/flat,750x,075,f-pad,750x1000,f8f8f8.jpg
+        </p>
+        <p>
+          https://ih1.redbubble.net/image.3002398508.6085/flat,750x,075,f-pad,750x1000,f8f8f8.jpg
+        </p>
+        <p>
+          https://ih1.redbubble.net/image.4569413361.0705/pp,504x498-pad,600x600,f8f8f8.jpg
+        </p>
+      </fieldset>
+    </form>
+  </div>
+</section>

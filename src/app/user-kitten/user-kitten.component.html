@@ -1,0 +1,9 @@
+<section class="main">
+  <app-list-kitten (catToAdopt)="onGetAdopt($event)"></app-list-kitten>
+
+  <div>
+    <ul *ngFor="let item of catToAdopt2">
+      <li><img [src]="item.image" alt="" class="src" /></li>
+    </ul>
+  </div>
+</section>

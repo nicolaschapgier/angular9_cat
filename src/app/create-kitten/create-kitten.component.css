@@ -1,0 +1,15 @@
+fieldset {
+  display: flex;
+  flex-direction: column;
+  width: 30%;
+  margin: 30px 0;
+  border: 3px solid blue;
+}
+label {
+  margin: 10px 0 0 0;
+}
+button {
+  margin: 20px;
+  border-radius: 20px;
+  cursor: pointer;
+}

@@ -1,0 +1,13 @@
+* {
+  list-style-type: none;
+}
+.main{
+  display: flex;
+  flex-direction: row;
+}
+ul img {
+  display: flex;
+  width: 10%;
+  border-radius: 5px;
+}
+
